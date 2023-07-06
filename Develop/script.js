@@ -2,12 +2,22 @@
 $(document).ready(function () {
   $(function () {
   //Save Button
+  
     //when clicked, saves the input in local storage
       // var saveButtonEl = $("#save-btn");
 
       // saveButtonEl.on("click", function () {
       //   localStorage.setItem();
       // });
+
+    $(".time-block").each(function(){
+      var hour = $(this).attr("id").split("-")[1];
+      var dayjs = dayjs().format("H");
+      console.log(hour)
+      if (hour < dayjs){
+        $(this).addClass("past")
+      }
+    })
 
   // If Then logic for assigning color to time block
     //if the current time=true, color is red
