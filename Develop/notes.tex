@@ -33,3 +33,17 @@ Done:
 //Add code to display the current date in the header of the page. [X]
 
  
+
+Original Code for timeblocks from tutoring
+
+$(function () {
+    var $timeBlocks = $('.time-block')
+    
+    $timeBlocks.each(function(){
+      var blockHour = $(this).attr("id").split("-")[1];
+      var dayjs = dayjs().format("H");
+      console.log(hour)
+      if (blockHour < dayjs){
+        $(this).addClass("past")
+      }
+    })
