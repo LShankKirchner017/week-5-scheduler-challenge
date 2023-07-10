@@ -1,14 +1,13 @@
 # Work Day Scheduler Starter Code
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours of 9am to 5pm
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-WHEN I click into a time block
-THEN I can enter an event
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
+
+This project was to use starter code provided by the program to create functionality in a scheduling website using 3rd party APIs such as day.js and jQuery. 
+
+
+Portions of this code were work through with the help of tutoring with Brooke Love on July 6th and office hours on July 6th. 
+
+
+This website allows the user to see their schedule, the current time, and allows them to store events in their calendar. 
+
+
+
+![Alt text](<Assets/Scheduler Screenshot.png>)
