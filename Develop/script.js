@@ -7,8 +7,12 @@ $(document).ready(function () {
     $(function(){
       saveButton.click(function(){
         var elementNum = parseInt($(this).parent().attr("id").split("-")[1]);
+
       })
 
+      var text = $('#test').text();
+      localStorage.setItem('text', text);
+      alert(localStorage.getItem('test'))
       // how we get the current time
        var now = dayjs();
 
@@ -34,6 +38,6 @@ $(document).ready(function () {
     })
    // how we display the current date
   dayjs().format("L LT");
-  var now = dayjs().format("dddd, MMMM D, YYYY");
+  var now = dayjs().format("dddd, MMMM D, YYYY, hh:mm");
   $("#currentDay").text(now).appendTo("header");
 })
