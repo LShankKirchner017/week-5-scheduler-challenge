@@ -1,7 +1,14 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the HTML
+
+var saveButton = $(".saveBtn")
+var text
 $(document).ready(function () {
          
     $(function(){
+      saveButton.click(function(){
+        var elementNum = parseInt($(this).parent().attr("id").split("-")[1]);
+      })
+
       // how we get the current time
        var now = dayjs();
 
@@ -23,6 +30,7 @@ $(document).ready(function () {
         }
         $timeBlocks.addClass(timeClass)
       })
+      
     })
    // how we display the current date
   dayjs().format("L LT");
