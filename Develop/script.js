@@ -5,37 +5,40 @@ var text
 $(document).ready(function () {
          
     $(function(){
-      saveButton.click(function(){
+      // using the save button to store the text input & how we put calendar slots in local storage
+      saveButton.click(function () {
+        var textVal = $(this).siblings(".description").val();
         var elementNum = parseInt($(this).parent().attr("id").split("-")[1]);
-      })
+        localStorage.setItem(elementNum, textVal);
+
+      });
+
 
       // how we get the current time
-       var now = dayjs();
+      var now = dayjs();
 
-      // how we compare the now hour to the schedule hour 
-      var $timeBlocks = $('.time-block')
-      $timeBlocks.each(function(){
-        var $timeBlocks = $(this)
-        var nowHour = now.hour()
-        var blockHour = $timeBlocks.attr('id').split('-')[1]
+      // how we compare the now hour to the schedule hour
+      var $timeBlocks = $(".time-block");
+      $timeBlocks.each(function () {
+        var $timeBlocks = $(this);
+        var nowHour = now.hour();
+        var blockHour = $timeBlocks.attr("id").split("-")[1];
 
-       // how we assign a class to the schedule block
-        var timeClass
-        if (blockHour == nowHour){
-          timeClass='present'
-        } else if (blockHour < nowHour){
-          timeClass='past'
+        // how we assign a class to the schedule block
+        var timeClass;
+        if (blockHour == nowHour) {
+          timeClass = "present";
+        } else if (blockHour < nowHour) {
+          timeClass = "past";
         } else {
-          timeClass='future'
+          timeClass = "future";
         }
-        $timeBlocks.addClass(timeClass)
-      })
-      
+        $timeBlocks.addClass(timeClass);
+      });
     })
 
-    // how we put calendar slots in local storage
 
-    // how we pull calendar slots out of local storage
+ 
    // how we display the current date
   dayjs().format("L LT");
   var now = dayjs().format("dddd, MMMM D, YYYY, hh:mm");
