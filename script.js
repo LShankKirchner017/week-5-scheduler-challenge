@@ -34,6 +34,15 @@ $(document).ready(function () {
           timeClass = "future";
         }
         $timeBlocks.addClass(timeClass);
+        // how we load the saved events (elementNum)
+          // check to see if anything is in the block when we loop
+          var savedEvent= localStorage.getItem(blockHour)
+          // if there is an event saved
+          console.log(savedEvent) 
+            if (savedEvent){
+              //then put value into the block 
+              $timeBlocks.find('.description').val(savedEvent)
+            } 
       });
     })
 
