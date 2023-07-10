@@ -1,5 +1,3 @@
-# Work Day Scheduler Starter Code
-
 This project was to use starter code provided by the program to create functionality in a scheduling website using 3rd party APIs such as day.js and jQuery. 
 
 
