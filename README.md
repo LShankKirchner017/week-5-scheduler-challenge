@@ -6,6 +6,9 @@ Portions of this code were work through with the help of tutoring with Brooke Lo
 
 This website allows the user to see their schedule, the current time, and allows them to store events in their calendar. 
 
+Link to deployed page: https://lshankkirchner017.github.io/week-5-scheduler-challenge/
+
+Link to repo: https://github.com/LShankKirchner017/week-5-scheduler-challenge
 
 
 ![Alt text](<Assets/Scheduler Screenshot.png>)
